@@ -67,35 +67,58 @@
                     echo $options['skill_section_coding_skill_title'];
                 ?>
             </h4>
-            <div class="progress-wrapper wow fadeInUp">
-              <span class="caption">JavaScript</span>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 86%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">86%</div>
-              </div>
-            </div>
+            <?php
+                $skill_coding_repeater = $options['skill_coding_repeater'];
+                foreach($skill_coding_repeater as $skill_coding):
+            ?>
+                <div class="progress-wrapper wow fadeInUp">
+                <span class="caption">
+                    <?php
+                        echo $skill_coding['skill_coding_name'];
+                    ?>
+                </span>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: <?php echo $skill_coding['skill_coding_progress']; ?>%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    <?php
+                        echo $skill_coding['skill_coding_progress'];
+                    ?>%
+                </div>
+                </div>
+                </div>
+            <?php
+                endforeach;
+            ?>
           </div>
         </div>
         <div class="col-md-6">
           <div class="px-lg-3">
-            <h4 class="wow fadeInUp">Design Skills</h4>
-            <div class="progress-wrapper wow fadeInUp">
-              <span class="caption">UI / UX Design</span>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 92%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">92%</div>
-              </div>
+            <h4 class="wow fadeInUp">
+                <?php
+                    echo $options['skill_section_design_skill_title'];
+                ?>
+            </h4>
+                <?php
+                    $skill_design_repeater = $options['skill_design_repeater'];
+                    foreach( $skill_design_repeater as $skill_design ):
+                ?>
+                    <div class="progress-wrapper wow fadeInUp">
+                    <span class="caption">
+                        <?php
+                            echo $skill_design['design_name'];
+                        ?>
+                    </span>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: <?php echo $skill_design['design_progress']; ?>%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                        <?php
+                            echo $skill_design['design_progress'];
+                        ?>%
+                    </div>
+                </div>
             </div>
-            <div class="progress-wrapper wow fadeInUp">
-              <span class="caption">Web Design</span>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 99%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">99%</div>
-              </div>
-            </div>
-            <div class="progress-wrapper wow fadeInUp">
-              <span class="caption">Logo Design</span>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 79%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">79%</div>
-              </div>
-            </div>
+            <?php
+                endforeach;
+            ?>
+            
           </div>
         </div>
       </div>

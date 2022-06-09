@@ -135,26 +135,24 @@ if( class_exists( 'CSF' ) ) {
                 'desc'      => 'Coding Skill Title goes here',
             ),
             array(
-                'id'     => 'skill_coding_repeater',
-                'type'   => 'repeater',
-                'title'  => 'Skill Progress',
-                'fields' => array(
-              
-                  array(
-                    'id'    => 'skill_coding_name',
-                    'type'  => 'text',
-                    'title' => 'Coding Skill Name',
-                    'desc'  => 'Coding Skill Name goes here',
-                  ),
-                  array(
-                    'id'    => 'skill_coding_progress',
-                    'type'  => 'text',
-                    'title' => 'Coding Skill Progress',
-                    'desc'  => 'Coding Skill Progress goes here',
-                  ),
-              
+                'id'        => 'skill_coding_repeater',
+                'title'     => 'Skill Coding',
+                'type'      => 'repeater',
+                'fields'    => array(
+                    array(
+                        'id'        => 'skill_coding_name',
+                        'title'     => 'Skill Name',
+                        'type'      => 'text',
+                        'desc'      => 'Skill Name goes here',
+                    ),
+                    array(
+                        'id'        => 'skill_coding_progress',
+                        'title'     => 'Skill Progress',
+                        'type'      => 'text',
+                        'desc'      => 'Skill Progress goes here',
+                    ),
                 ),
-              ),
+            ),
             //   Design skills 
             array(
                 'id'        => 'skill_section_design_skill_title',
@@ -163,26 +161,24 @@ if( class_exists( 'CSF' ) ) {
                 'desc'      => 'Design Skill Title goes here',
             ),
             array(
-                'id'     => 'skill_design_repeater',
-                'type'   => 'repeater',
-                'title'  => 'Design Skill Progress',
-                'fields' => array(
-              
-                  array(
-                    'id'    => 'skill_design_name',
-                    'type'  => 'text',
-                    'title' => 'Design Skill Name',
-                    'desc'  => 'Design Skill Name goes here',
-                  ),
-                  array(
-                    'id'    => 'skill_design_progress',
-                    'type'  => 'text',
-                    'title' => 'Design Skill Progress',
-                    'desc'  => 'Design Skill Progress goes here',
-                  ),
-              
+                'id'        => 'skill_design_repeater',
+                'title'     => 'Skill Design',
+                'type'      => 'repeater',
+                'fields'    => array(
+                    array(
+                        'id'        => 'design_name',
+                        'title'     => 'Design Name',
+                        'type'      => 'text',
+                        'desc'      => 'Design Name goes here',
+                    ),
+                    array(
+                        'id'        => 'design_progress',
+                        'title'     => 'Design Progress',
+                        'type'      => 'text',
+                        'desc'      => 'Design Progress goes here',
+                    ),
                 ),
-              ),
+            ),
         ),
     ) );
     
