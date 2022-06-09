@@ -56,11 +56,43 @@ if( class_exists( 'CSF' ) ) {
         'title'   => 'About Section',
         'fields'  => array(
             array(
-                'id'        => 'about-name',
+                'id'        => 'about_image',
+                'type'      => 'media',
+                'title'     => 'About Image',
+                'desc'      => 'About Section Image Here',
+            ),
+            array(
+                'id'        => 'about_name',
                 'type'      => 'text',
                 'title'     => 'About Name',
                 'desc'      => 'About Section Name Here',
             ),
+            array(
+                'id'        => 'about_designation',
+                'type'      => 'text',
+                'title'     => 'About Designation',
+                'desc'      => 'About Section Designation Here',
+            ),
+            array(
+                'id'        => 'about_content',
+                'type'      => 'textarea',
+                'title'     => 'About Content',
+                'desc'      => 'About Section Content Here',
+            ),
+            array(
+                'id'     => 'about_repeater_address',
+                'type'   => 'repeater',
+                'title'  => 'About Address',
+                'fields' => array(
+              
+                  array(
+                    'id'    => 'opt-text',
+                    'type'  => 'text',
+                    'title' => 'Text'
+                  ),
+              
+                ),
+              ),
         ),
     ) );
     
