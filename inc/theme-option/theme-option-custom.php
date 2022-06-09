@@ -181,6 +181,89 @@ if( class_exists( 'CSF' ) ) {
             ),
         ),
     ) );
-    
+    CSF::createSection( $prefix, array(
+        'title'     => 'Education Section',
+        'fields'    => array(
+            array(
+                'id'        => 'education_title',
+                'title'     => 'Education Title',
+                'type'      => 'text',
+                'desc'      => 'Education Title goes here',
+            ),
+            array(
+                'id'        => 'education_repeater',
+                'title'     => 'Education Details',
+                'type'      => 'repeater',
+                'fields'    => array(
+                    array(
+                        'id'        => 'education_year',
+                        'title'     => 'Education Year',
+                        'type'      => 'text',
+                        'desc'      => 'Education Year goes here',
+                    ),
+                    array(
+                        'id'        => 'education_course_name',
+                        'title'     => 'Education Course Name',
+                        'type'      => 'text',
+                        'desc'      => 'Education Course Name goes here',
+                    ),
+                    array(
+                        'id'        => 'education_versity_name',
+                        'title'     => 'Education Versity Name',
+                        'type'      => 'text',
+                        'desc'      => 'Education Versity Name goes here',
+                    ),
+                    array(
+                        'id'        => 'education_about_versity',
+                        'title'     => 'Education About Versity',
+                        'type'      => 'textarea',
+                        'desc'      => 'Education About Versity goes here',
+                    ),
+                ),
+            ),
+        ),
+    ) );
+    CSF::createSection( $prefix, array(
+        'title'     => 'Experience',
+        'fields'    => array(
+            array(
+                'id'        => 'experience_title',
+                'title'     => 'Experience Title',
+                'type'      => 'text',
+                'desc'      => 'Experience Tile goes here',
+            ),
+            array(
+                'id'        => 'experience_repeater',
+                'title'     => 'Experience',
+                'type'      => 'repeater',
+                'fields'    => array(
+                    array(
+                        'id'        => 'experience_year',
+                        'title'     => 'Experience Year',
+                        'type'      => 'text',
+                        'desc'      => 'Experience Year goes here',
+                    ),
+                    array(
+                        'id'        => 'experience_course_name',
+                        'title'     => 'Experience Course Name',
+                        'type'      => 'text',
+                        'desc'      => 'Experience Course Name goes here',
+                    ),
+                    array(
+                        'id'        => 'experience_versity_name',
+                        'title'     => 'Experience Versity Name',
+                        'type'      => 'text',
+                        'desc'      => 'Experience Versity Name goes here',
+                    ),
+                    array(
+                        'id'        => 'experience_about_versity',
+                        'title'     => 'Experience About Versity',
+                        'type'      => 'textarea',
+                        'desc'      => 'Experience About Versity goes here',
+                    ),
+                ),
+            ),
+        ),
+    ) );
   
   }
