@@ -21,15 +21,35 @@ if( class_exists( 'CSF' ) ) {
       'fields' => array(
         // A text field
         array(
-          'id'    => 'hero_area_text',
-          'type'  => 'text',
-          'title' => 'Hero Area Text',
+          'id'      => 'hero_area_text',
+          'type'    => 'text',
+          'title'   => 'Hero Area Text',
+          'desc'    => 'Hero Area Text Here',
         ),
         array(
-            'id'    => 'hero_area_pre_text',
-            'type'  => 'text',
-            'title' => 'Hero Area Pre Text',
-          ),
+            'id'        => 'hero_area_pre_text',
+            'type'      => 'text',
+            'title'     => 'Hero Area Pre Text',
+            'desc'      => 'Hero Area Pre Text Here',
+        ),
+        array(
+            'id'        => 'hero_area_first_name',
+            'type'      => 'text',
+            'title'     => 'Hero Area First Name',
+            'desc'      => 'Hero Area First Name Here',
+        ),
+        array(
+            'id'        => 'hero_area_last_name',
+            'type'      => 'text',
+            'title'     => 'Hero Area Last Name',
+            'desc'      => 'Hero Area Last Name Here',
+        ),
+        array(
+            'id'        => 'hero_area_designation',
+            'type'      => 'text',
+            'title'     => 'Hero Area Designation Name',
+            'desc'      => 'Hero Area Designation Name Here',
+        ),
       )
     ) );
     CSF::createSection( $prefix, array(
@@ -38,7 +58,8 @@ if( class_exists( 'CSF' ) ) {
             array(
                 'id'        => 'about-name',
                 'type'      => 'text',
-                'title'     => 'About Name'
+                'title'     => 'About Name',
+                'desc'      => 'About Section Name Here',
             ),
         ),
     ) );

@@ -1,3 +1,7 @@
+<?php
+    // Get options
+    $options = get_option( 'my_framework' );
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -81,9 +85,29 @@
     </div> <!-- End Navbar -->
     <!-- Caption header -->
     <div class="caption-header text-center wow zoomInDown">
-      <h5 class="fw-normal">Welcome</h5>
-      <h1 class="fw-light mb-4">I'm <b class="fg-theme">Stephen</b> Doe</h1>
-      <div class="badge">UI/UX & Web Designer</div>
+        <h5 class="fw-normal">
+            <?php
+                echo $options['hero_area_text'];
+            ?>
+        </h5>
+        <h1 class="fw-light mb-4">
+            <?php
+                echo $options['hero_area_pre_text'];
+            ?>
+            <b class="fg-theme">
+                <?php
+                    echo $options['hero_area_first_name'];
+                ?>
+            </b> 
+            <?php
+                echo $options['hero_area_last_name'];
+            ?>
+        </h1>
+        <div class="badge">
+            <?php
+                echo $options['hero_area_designation'];
+            ?>
+        </div>
     </div> 
     <!-- End Caption header -->
     <div class="floating-button"><span class="ti-mouse"></span></div>
