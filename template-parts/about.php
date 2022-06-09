@@ -1,53 +1,76 @@
+<?php
+    $options = get_option( 'my_framework' );
+?>
 <div class="vg-page page-about" id="about">
     <div class="container py-5">
       <div class="row">
         <div class="col-lg-4 py-3">
           <div class="img-place wow fadeInUp">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/person.jpg" alt="">
+            <img src="<?php echo $options['about_image']['url']; ?>" alt="">
           </div>
         </div>
         <div class="col-lg-6 offset-lg-1 wow fadeInRight">
-          <h1 class="fw-light">Stephen Doe</h1>
-          <h5 class="fg-theme mb-3">UI/UX & Web Designer</h5>
-          <p class="text-muted">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form but the majority have suffered alteration in some</p>
-          <ul class="theme-list">
-            <li><b>From:</b> Texas, US</li>
-            <li><b>Lives In:</b> Texas, US</li>
-            <li><b>Age:</b> 25</li>
-            <li><b>Gender:</b> Male</li>
-          </ul>
-          <button class="btn btn-theme-outline">Download CV</button>
+            <h1 class="fw-light">
+                <?php 
+                    echo $options['about_name']; 
+                ?>
+            </h1>
+            <h5 class="fg-theme mb-3">
+                <?php 
+                    echo $options['about_designation']; 
+                ?>
+            </h5>
+            <p class="text-muted">
+                <?php 
+                    echo $options['about_content']; 
+                ?>
+            </p>
+            <ul class="theme-list">
+                <?php 
+                    $about_repeater_address = $options['about_repeater_address'];
+                    foreach ($about_repeater_address as $about_address) {
+                ?>
+                    <li>
+                        <b>
+                            <?php
+                                echo $about_address['about_address_label'];
+                            ?>
+                        </b> 
+                            <?php
+                                echo $about_address['about_address_value'];
+                            ?>
+                    </li>
+                <?php
+                    }
+                ?>
+                
+            </ul>
+            <a href="<?php echo $options['about_download_cv_url']; ?>" class="btn btn-theme-outline">
+                <?php
+                    echo $options['about_download_cv'];
+                ?>
+            </a>
         </div>
       </div>
     </div>
     <div class="container py-5">
-      <h1 class="text-center fw-normal wow fadeIn">My Skills</h1>
+      <h1 class="text-center fw-normal wow fadeIn">
+            <?php
+                echo $options['skill_section_title'];
+            ?>
+      </h1>
       <div class="row py-3">
         <div class="col-md-6">
           <div class="px-lg-3">
-            <h4 class="wow fadeInUp">Coding skills</h4>
+            <h4 class="wow fadeInUp">
+                <?php
+                    echo $options['skill_section_coding_skill_title'];
+                ?>
+            </h4>
             <div class="progress-wrapper wow fadeInUp">
               <span class="caption">JavaScript</span>
               <div class="progress">
                 <div class="progress-bar" role="progressbar" style="width: 86%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">86%</div>
-              </div>
-            </div>
-            <div class="progress-wrapper wow fadeInUp">
-              <span class="caption">PHP</span>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">80%</div>
-              </div>
-            </div>
-            <div class="progress-wrapper wow fadeInUp">
-              <span class="caption">HTML + CSS</span>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">100%</div>
-              </div>
-            </div>
-            <div class="progress-wrapper wow fadeInUp">
-              <span class="caption">Phyton</span>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">90%</div>
               </div>
             </div>
           </div>

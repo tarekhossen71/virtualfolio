@@ -15,11 +15,17 @@ if( class_exists( 'CSF' ) ) {
     ) );
   
     //
-    // Create a section
+    // Hero Area section
     CSF::createSection( $prefix, array(
       'title'  => 'Hero Area Section',
       'fields' => array(
         // A text field
+        array(
+          'id'      => 'hero_area_bg_img',
+          'type'    => 'media',
+          'title'   => 'Hero Area Background Image',
+          'desc'    => 'Hero Area Background Image Here',
+        ),
         array(
           'id'      => 'hero_area_text',
           'type'    => 'text',
@@ -52,6 +58,7 @@ if( class_exists( 'CSF' ) ) {
         ),
       )
     ) );
+    // About Section 
     CSF::createSection( $prefix, array(
         'title'   => 'About Section',
         'fields'  => array(
@@ -84,11 +91,94 @@ if( class_exists( 'CSF' ) ) {
                 'type'   => 'repeater',
                 'title'  => 'About Address',
                 'fields' => array(
+                  array(
+                    'id'    => 'about_address_label',
+                    'type'  => 'text',
+                    'title' => 'Address Label'
+                  ),
+                  array(
+                    'id'    => 'about_address_value',
+                    'type'  => 'text',
+                    'title' => 'Address Value'
+                  ),
+                ),
+              ),
+          array(
+            'id'        => 'about_download_cv',
+            'type'      => 'text',
+            'title'     => 'About Button Name',
+            'desc'      => 'About Section Button Name Here',
+          ),
+          array(
+            'id'        => 'about_download_cv_url',
+            'type'      => 'text',
+            'title'     => 'About Button URL',
+            'desc'      => 'About Section Button URL Here',
+          ),
+        ),
+    ) );
+    // MY skills 
+    CSF::createSection( $prefix, array(
+        'title'     => 'My Skills Section',
+        'fields'    => array(
+            array(
+                'id'        => 'skill_section_title',
+                'title'     => 'Skill Section Title',
+                'type'      => 'text',
+                'desc'      => 'Skill Section Title goes here',
+            ),
+            // Coding skills 
+            array(
+                'id'        => 'skill_section_coding_skill_title',
+                'title'     => 'Skill Section Coding Skill Title',
+                'type'      => 'text',
+                'desc'      => 'Coding Skill Title goes here',
+            ),
+            array(
+                'id'     => 'skill_coding_repeater',
+                'type'   => 'repeater',
+                'title'  => 'Skill Progress',
+                'fields' => array(
               
                   array(
-                    'id'    => 'opt-text',
+                    'id'    => 'skill_coding_name',
                     'type'  => 'text',
-                    'title' => 'Text'
+                    'title' => 'Coding Skill Name',
+                    'desc'  => 'Coding Skill Name goes here',
+                  ),
+                  array(
+                    'id'    => 'skill_coding_progress',
+                    'type'  => 'text',
+                    'title' => 'Coding Skill Progress',
+                    'desc'  => 'Coding Skill Progress goes here',
+                  ),
+              
+                ),
+              ),
+            //   Design skills 
+            array(
+                'id'        => 'skill_section_design_skill_title',
+                'title'     => 'Skill Section Design Skill Title',
+                'type'      => 'text',
+                'desc'      => 'Design Skill Title goes here',
+            ),
+            array(
+                'id'     => 'skill_design_repeater',
+                'type'   => 'repeater',
+                'title'  => 'Design Skill Progress',
+                'fields' => array(
+              
+                  array(
+                    'id'    => 'skill_design_name',
+                    'type'  => 'text',
+                    'title' => 'Design Skill Name',
+                    'desc'  => 'Design Skill Name goes here',
+                  ),
+                  array(
+                    'id'    => 'skill_design_progress',
+                    'type'  => 'text',
+                    'title' => 'Design Skill Progress',
+                    'desc'  => 'Design Skill Progress goes here',
                   ),
               
                 ),

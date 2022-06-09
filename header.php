@@ -48,7 +48,7 @@
     </div>
   </div>
   
-  <div class="vg-page page-home" id="home" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/bg_image_1.jpg)">
+  <div class="vg-page page-home" id="home" style="background-image: url(<?php echo $options['hero_area_bg_img']['url']; ?>)">
     <!-- Navbar -->
     <div class="navbar navbar-expand-lg navbar-dark sticky" data-offset="500">
       <div class="container">
