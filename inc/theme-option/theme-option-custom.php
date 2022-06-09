@@ -181,6 +181,7 @@ if( class_exists( 'CSF' ) ) {
             ),
         ),
     ) );
+    // Education Section 
     CSF::createSection( $prefix, array(
         'title'     => 'Education Section',
         'fields'    => array(
@@ -223,6 +224,7 @@ if( class_exists( 'CSF' ) ) {
             ),
         ),
     ) );
+    // Experience Section 
     CSF::createSection( $prefix, array(
         'title'     => 'Experience',
         'fields'    => array(
@@ -260,6 +262,80 @@ if( class_exists( 'CSF' ) ) {
                         'title'     => 'Experience About Versity',
                         'type'      => 'textarea',
                         'desc'      => 'Experience About Versity goes here',
+                    ),
+                ),
+            ),
+        ),
+    ) );
+    // Service Section 
+    CSF::createSection( $prefix, array(
+        'title'         => 'Service Section',
+        'fields'        => array(
+            array(
+                'id'        => 'service_title',
+                'title'     => 'Service Title',
+                'type'      => 'text',
+                'desc'      => 'Service Title goes here'
+            ),
+            array(
+                'id'        => 'service_shortdes',
+                'title'     => 'Service Short Description',
+                'type'      => 'text',
+                'desc'      => 'Service Short Description Title goes here'
+            ),
+            array(
+                'id'        => 'service_card',
+                'title'     => 'Service',
+                'type'      => 'repeater',
+                'fields'    => array(
+                    array(
+                        'id'        => 'service_icon_class',
+                        'title'     => 'Service Icon Class Name',
+                        'type'      => 'text',
+                        'desc'      => 'Get Icon Class Name From https://themify.me/themify-icons',
+                    ),
+                    array(
+                        'id'        => 'service_title',
+                        'title'     => 'Service Title',
+                        'type'      => 'text',
+                        'desc'      => 'Service Title goes here',
+                    ),
+                    array(
+                        'id'        => 'service_description',
+                        'title'     => 'Service Desctiption',
+                        'type'      => 'text',
+                        'desc'      => 'Service Desctiption goes here',
+                    ),
+                ),
+            ),
+        ),
+    ) );
+    // Counter Section 
+    CSF::createSection( $prefix, array(
+        'title'     => 'Counter Section',
+        'fields'    => array(
+            array(
+                'id'        => 'counter_bg_img',
+                'title'     => 'Counter Background Image',
+                'type'      => 'media',
+                'desc'      => 'Counter Background Image goes here'
+            ),
+            array(
+                'id'        => 'counter_section',
+                'title'     => 'Counter',
+                'type'      => 'repeater',
+                'fields'    => array(
+                    array(
+                        'id'        => 'counter_number',
+                        'title'     => 'Counter Number',
+                        'type'      => 'text',
+                        'desc'      => 'Counter Number goes here',
+                    ),
+                    array(
+                        'id'        => 'counter_name',
+                        'title'     => 'Counter Name',
+                        'type'      => 'text',
+                        'desc'      => 'Counter Name goes here',
                     ),
                 ),
             ),

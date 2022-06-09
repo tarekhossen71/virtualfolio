@@ -10,7 +10,4 @@
         get_template_part( 'template-parts/blog' );
         get_template_part( 'template-parts/contact' );
     ?>
-  
-  
-  
   <?php get_footer(); ?>
