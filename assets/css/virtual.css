@@ -576,6 +576,16 @@ a:hover, a:active {
     padding: 14px 10px;
 }
 
+.footer-info p {
+	margin-bottom: 0;
+}
+.wp-container-4 .wp-block-columns{
+	margin-bottom: 0;
+}
+.wpcf7 input[type="email"]{
+	width: 404px;
+	height: 60px;
+}
 @media (min-width: 576px) {
     .navbar-expand-sm .navbar-nav .nav-link {
         padding-left: 12px;

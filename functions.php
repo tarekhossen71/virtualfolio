@@ -4,13 +4,18 @@
 
     function v_folio_theme_setup(){
         add_theme_support( 'post-thumbnails' );
-        add_theme_support( 'menus' );
+        // add_theme_support( 'menus' );
         add_theme_support( 'widgets' );
         add_theme_support( 'custom-header' );
         add_theme_support( 'custom-background' );
         add_theme_support( 'custom-logo' );
         add_theme_support( 'title-tag' );
+        add_theme_support( 'automatic-feed-links' );
 
+    }
+    add_action( 'after_setup_theme', 'v_folio_theme_setup' );
+
+    function v_folio_nav_menu(){
         register_nav_menus( array(
             'primary-menu'      => __( 'Primary Menu', 'v_folio' ),
         ) );
@@ -37,7 +42,7 @@
         }
         add_filter( 'nav_menu_link_attributes', 'tg_atts', 10, 3 );
     }
-    add_action( 'after_setup_theme', 'v_folio_theme_setup' );
+    add_action( 'init', 'v_folio_nav_menu' );
 
     function v_folio_assets(){
         // Version define 
@@ -87,6 +92,29 @@
     }
     add_action( 'wp_head', 'v_folio_head_meta' );
 
-    // Custom Post Type 
-    require_once( get_theme_file_path( '/inc/post-type/education-post-type.php' ) );
+    // Register Footer 
+    function v_folio_footer_widget(){
+        register_sidebar( array(
+            'name'          => __( 'Footer One', 'v_folio' ),
+            'description'   => __( 'This widget will show in footer one', 'v_folio' ),
+            'id'            => 'footer_one',
+            'before_widget' => '<div class="footer-info">',
+            'after_widget'  => '</div>',
+        ) );
+        register_sidebar( array(
+            'name'          => __( 'Footer Two', 'v_folio' ),
+            'description'   => __( 'This widget will show in footer two', 'v_folio' ),
+            'id'            => 'footer_two',
+            'before_widget' => '<div class="float-lg-right">',
+            'after_widget'  => '</div>',
+        ) );
+        register_sidebar( array(
+            'name'          => __( 'Footer three', 'v_folio' ),
+            'description'   => __( 'This widget will show in footer three', 'v_folio' ),
+            'id'            => 'footer_three',
+            'before_widget' => '<div class="float-lg-right">',
+            'after_widget'  => '</div>',
+        ) );
+    }
+    add_action( 'widgets_init', 'v_folio_footer_widget' );
     
