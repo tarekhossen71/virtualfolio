@@ -1,4 +1,4 @@
-=== Twenty Twenty ===
+=== Vitual Folio ===
 Contributors: the WordPress team
 Tested up to: 5.9
 Stable tag: 1.9
